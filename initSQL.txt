@@ -9,8 +9,3 @@ priority INT NOT NULL DEFAULT 0,
 period DATETIME NULL,
 created_at DATETIME NOT NULL, 
 updated_at DATETIME NULL)ENGINE=InnoDB, DEFAULT CHARSET=utf8;
-
-
-# サンプルデータの挿入
-INSERT INTO tasks(title, detail, created_at) VALUES('サンプル１', 'サンプル1です。', now());
-INSERT INTO tasks(title, detail, priority, created_at) VALUES('サンプル2', 'サンプル2です。', 1, now());
