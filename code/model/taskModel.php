@@ -21,8 +21,14 @@ class Task
 
   public function add($array)
   {
+    $this->title = $array['title'];
+    $this->detail = $array['detail'];
+    $this->priority = $array['priority'];
+    $this->period = $array['period'];
+
+
     $now = date("Y/m/d H:i:s");
-    $sql = "INSERT INTO tasks(title, detail, priority, period, created_at) VALUES('{$this->title}', '{$this->detail}', {$this->priority}, '{$this->period}', {$now})";
+    $sql = "INSERT INTO tasks(title, detail, priority, period, created_at) VALUES('{$this->title}', '{$this->detail}', {$this->priority}, '{$this->period}', '{$now}')";
     mysqli_query($this->link, $sql) or die("タスク追加に失敗しました。");
   }
 }
