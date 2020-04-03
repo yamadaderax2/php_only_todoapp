@@ -1,8 +1,8 @@
 <?php
-include('../model/tasksModel.php');
+include('../model/taskModel.php');
 
 $task = new Task;
-if ($_POST['title']) {
+if (isset($_POST['title'])) {
 
 }
 else{

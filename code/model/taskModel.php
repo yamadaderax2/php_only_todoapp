@@ -1,6 +1,6 @@
 <?php
 
-include('./db_info.php');
+include('../model/db_info.php');
 
 /**
  * Tasksテーブルに関する操作を行うクラス
