@@ -31,6 +31,12 @@ class Task
     $sql = "INSERT INTO tasks(title, detail, priority, period, created_at) VALUES('{$this->title}', '{$this->detail}', {$this->priority}, '{$this->period}', '{$now}')";
     mysqli_query($this->link, $sql) or die("タスク追加に失敗しました。");
   }
+
+  public function get_all()
+  {
+    $sql = "SELECT * FROM tasks WHERE status = 0";
+
+  }
 }
 
 ?>
